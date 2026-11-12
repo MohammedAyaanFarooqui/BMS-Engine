@@ -1,0 +1,16 @@
+id,scenario,cell1_v,cell2_v,cell3_v,cell4_v,pot1_pct,pot2_pct,pot3_pct,pot4_pct,raw1,raw2,raw3,raw4,exp_soc_pct,exp_imbalance_mv,exp_threshold_mv,exp_final_state,exp_relay,exp_led,exp_buzzer,exp_lcd_p1_line1,exp_lcd_p1_line2,exp_system_state,exp_risk_steady,exp_recommendation,time_to_state_ms_from_change
+M01,"Balanced, high SoC",3.00,3.00,3.00,3.00,90.9,90.9,90.9,90.9,3723,3723,3723,3723,93.8,0.0,150,NORMAL,CLOSED,GREEN,Off,SoC: 93.8%,Imb:0mV -,NORMAL,0.0,Battery operating normally,
+M02,Small imbalance (below warn),2.90,2.95,3.00,2.92,87.9,89.4,90.9,88.5,3599,3661,3723,3623,92.0,99.9,150,NORMAL,CLOSED,GREEN,Off,SoC: 92.0%,Imb:100mV -,NORMAL,26.6,Battery operating normally,
+M03,Warning imbalance,3.00,2.95,2.90,2.86,90.9,89.4,87.9,86.7,3723,3661,3599,3549,91.5,140.2,150,WARNING,CLOSED,YELLOW,Off,SoC: 91.5%,Imb:140mV -,DEGRADED,37.4,Check cell imbalance,1600
+M04,Fault imbalance (high SoC),3.10,3.00,2.90,2.80,93.9,90.9,87.9,84.8,3847,3723,3599,3475,92.2,299.8,150,FAULT,OPEN,RED,Pulse 300 ms every 2 s,FAULT: OVERRIDE,IMB:300mV TH:150,FAILSAFE,45.0,FAILSAFE: inspect battery,1400
+M05,SoC band <20%,0.50,0.50,0.50,0.50,15.2,15.2,15.2,15.2,620,620,620,620,15.6,0.0,180,NORMAL,CLOSED,GREEN,Off,SoC: 15.6%,Imb:0mV -,NORMAL,7.2,Battery operating normally,
+M06,SoC band 20-30%,0.80,0.80,0.80,0.80,24.2,24.2,24.2,24.2,993,993,993,993,25.0,0.0,150,NORMAL,CLOSED,GREEN,Off,SoC: 25.0%,Imb:0mV -,NORMAL,2.5,Battery operating normally,
+M07,SoC band 30-40%,1.10,1.10,1.10,1.10,33.3,33.3,33.3,33.3,1365,1365,1365,1365,34.4,0.0,130,NORMAL,CLOSED,GREEN,Off,SoC: 34.4%,Imb:0mV -,NORMAL,0.0,Battery operating normally,
+M08,SoC band 40-50%,1.40,1.40,1.40,1.40,42.4,42.4,42.4,42.4,1737,1737,1737,1737,43.7,0.0,110,NORMAL,CLOSED,GREEN,Off,SoC: 43.7%,Imb:0mV -,NORMAL,0.0,Battery operating normally,
+M09,SoC band 50-70%,1.80,1.80,1.80,1.80,54.5,54.5,54.5,54.5,2234,2234,2234,2234,56.3,0.0,100,NORMAL,CLOSED,GREEN,Off,SoC: 56.3%,Imb:0mV -,NORMAL,0.0,Battery operating normally,
+M10,SoC band 70-80%,2.40,2.40,2.40,2.40,72.7,72.7,72.7,72.7,2978,2978,2978,2978,75.0,0.0,110,NORMAL,CLOSED,GREEN,Off,SoC: 75.0%,Imb:0mV -,NORMAL,0.0,Battery operating normally,
+M11,SoC band 80-90%,2.80,2.80,2.80,2.80,84.8,84.8,84.8,84.8,3475,3475,3475,3475,87.5,0.0,130,NORMAL,CLOSED,GREEN,Off,SoC: 87.5%,Imb:0mV -,NORMAL,0.0,Battery operating normally,
+M12,Warning at mid SoC,2.05,2.00,1.98,1.96,62.1,60.6,60.0,59.4,2544,2482,2457,2432,62.4,90.3,100,WARNING,CLOSED,YELLOW,Off,SoC: 62.4%,Imb:90mV -,DEGRADED,36.1,Check cell imbalance,1600
+M13,Fault at mid SoC,2.10,2.00,2.00,1.98,63.6,60.6,60.6,60.0,2606,2482,2482,2457,63.1,120.1,100,FAULT,OPEN,RED,Pulse 300 ms every 2 s,FAULT: OVERRIDE,IMB:120mV TH:100,FAILSAFE,45.0,FAILSAFE: inspect battery,1400
+M14,Open tap on cell 3,3.00,3.00,0.10,3.00,90.9,90.9,3.0,90.9,3723,3723,124,3723,71.1,2900.3,110,FAULT,OPEN,RED,Pulse 300 ms every 2 s,FAULT: OVERRIDE,IMB:2900mV TH:110,FAILSAFE,45.0,Inspect cell sensor/wiring,200
+M15,Over-range on cell 2,3.00,3.25,3.00,3.00,90.9,98.5,90.9,90.9,3723,4033,3723,3723,95.7,249.8,150,FAULT,OPEN,RED,Pulse 300 ms every 2 s,FAULT: OVERRIDE,IMB:250mV TH:150,FAILSAFE,45.0,Inspect cell sensor/wiring,200
